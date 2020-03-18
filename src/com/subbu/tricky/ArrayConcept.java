@@ -15,8 +15,14 @@ public class ArrayConcept {
 //		arrayObjects();
 //		multiDimentionalArray();
 //		arrayTest();
-//		jaggeArrays();
-		compareArrays();
+//		jaggedArrays();
+//		compareArrays();
+//		arrayIteration();
+//		foreachLoop();
+//		insertArrayElements();
+//		removeIndexArray();
+//		minMaxValue();
+		copyArrays();
 	}
 
 	static void oneDimention() {
@@ -57,7 +63,7 @@ public class ArrayConcept {
 		System.out.println(a[1]);
 	}
 
-	static void jaggeArrays() {
+	static void jaggedArrays() {
 		int a[][] = new int[4][];
 		a[0] = new int[1];
 		a[1] = new int[2];
@@ -91,9 +97,103 @@ public class ArrayConcept {
 			System.out.println("Not Equal");
 	}
 
-	static void testing() {
+	static void arrayIteration() {
+//		String array type iteration
+		String strarray[] = new String[10];
 
+		for (int i = 0; i < strarray.length; i++) {
+			strarray[i] = "String of " + i;
+		}
+		for (int i = 0; i < strarray.length; i++) {
+			System.out.println(strarray[i]);
+		}
+
+//		int array type iteration
+		int[] intarray = new int[5];
+		for (int i = 0; i < intarray.length; i++) {
+			intarray[i] = i;
+		}
+		for (int i = 0; i < intarray.length; i++) {
+			System.out.println(intarray[i]);
+		}
 	}
+
+	static void foreachLoop() {
+		int a[] = { 1, 2, 3 };
+		for (int x : a) {
+			if (x == 1) {
+				a[2] = 2;
+				System.out.println(a[x]);
+			}
+			System.out.println(x);
+		}
+	}
+
+	static void insertArrayElements() {
+		int[] ints = new int[20];
+
+		int insertIndex = 10;
+		int newValue = 123;
+
+		// move elements below insertion point.
+//		for (int i = ints.length - 1; i > insertIndex; i--) {
+//			ints[i] = ints[i - 1];
+//		}
+
+		// insert new value
+		ints[insertIndex] = newValue;
+
+		System.out.println(Arrays.toString(ints));
+	}
+
+	static void removeIndexArray() {
+//		int ints[] = new int[20];
+		int ints[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
+		int removeindex = 9;
+		for (int i = removeindex; i < ints.length - 1; i++) {
+			ints[i] = ints[i + 1];
+			System.out.println(ints[i]);
+//			System.out.println(i);
+		}
+	}
+
+	static void minMaxValue() {
+//		int ints[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
+//		int minvalue = Integer.MAX_VALUE;
+//		System.out.println(minvalue);
+//		for(int i=0;i<ints.length;i++) {
+//			if(ints[i]<minvalue)
+//				minvalue = ints[i];
+//			System.out.println(minvalue);
+//		}
+
+		int[] ints = { 0, 2, 4, 16, 8, 10 };
+		int maxVal = Integer.MIN_VALUE;
+//		System.out.println(maxVal);
+		for (int i = 0; i < ints.length; i++) {
+			if (ints[i] > maxVal) {
+				System.out.println("inner" + maxVal);
+				maxVal = ints[i];
+			}
+		}
+		System.out.println("maxVal = " + maxVal);
+	}
+
+	static void copyArrays() {
+		int source[] = new int[10];
+//		int dest[] = new int[10];
+
+		for (int i = 0; i < source.length; i++) {
+			int a = 10;
+			source[i] = a + i;
+		}
+//		int dest[] = Arrays.copyOfRange(source, 2, source.length);
+		int dest[] = Arrays.copyOf(source, source.length);
+		for (int j = 0; j < source.length; j++) {
+			System.out.println(dest[j]);
+		}
+	}
+
 }
 
 class Employee {
