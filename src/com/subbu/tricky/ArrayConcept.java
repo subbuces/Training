@@ -22,7 +22,7 @@ public class ArrayConcept {
 //		insertArrayElements();
 //		removeIndexArray();
 //		minMaxValue();
-		copyArrays();
+//		copyArrays();
 	}
 
 	static void oneDimention() {
