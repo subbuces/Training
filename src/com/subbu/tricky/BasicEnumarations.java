@@ -1,5 +1,6 @@
 /**
- * 
+ * 1. Need more information on enum in singleton
+ * 2. Yet to know more real time cases to use enum
  */
 package com.subbu.tricky;
 
@@ -17,12 +18,13 @@ enum Color {
 }
 
 enum Day {
-	
+
 	SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;
+
 	private Day() {
 		System.out.println("Constructor called for : " + this.toString());
 	}
-	
+
 	public void colorInfo() {
 		System.out.println("Universal Color");
 	}
