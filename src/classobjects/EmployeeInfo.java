@@ -28,5 +28,10 @@ class empinfo {
 }
 
 public class EmployeeInfo {
+	public static void main(String args[]) {
+		empinfo ei = new empinfo();
+		ei.inserRecord(10, "subbarao", "QA");
+		ei.displayInformation();
+	}
 
 }
