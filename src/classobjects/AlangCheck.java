@@ -1,8 +1,9 @@
 package classobjects;
-
-import static java.lang.System.out.*;
-public class AlangCheck {
+import package classobjects;
+class AlangCheck {
 	public static void main(String[] args) {
-		out.println("Test");
+		System.out.println("Test");
+		ClassA ca = new ClassA();
+		
 	}
 }
