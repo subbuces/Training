@@ -1,8 +1,5 @@
 package classobjects;
-
+@FunctionalInterface
 public interface InterFace {
-	static void methodA(){
-		
-	}
-
+	public void methodA();
 }
